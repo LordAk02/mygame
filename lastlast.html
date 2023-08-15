@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fancy Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #cba01f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .input-label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .input-field {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .generate-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .generate-button:hover {
+            background-color: #0056b3;
+        }
+        .user-info {
+            display: none;
+            margin-top: 20px;
+        }
+        .info-text {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Welcome to the Fancy Landing Page</div>
+        <div class="input-container">
+            <label class="input-label" for="name">Name:</label>
+            <input class="input-field" type="text" id="name">
+        </div>
+        <div class="input-container">
+            <label class="input-label" for="age">Age:</label>
+            <input class="input-field" type="number" id="age">
+        </div>
+        <button class="generate-button" onclick="openLoremPage()">Generate Info</button>
+        <div class="user-info" id="userInfo">
+            <p class="info-text" id="infoText"></p>
+        </div>
+    </div>
+  <div class="lorem-box" id="loremBox"></div>
+
+    <script>
+        function openLoremPage() {
+            const newWindow = window.open("quiz-page.html", "_blank");
+        }
+    </script>
+</body>
+</html>
